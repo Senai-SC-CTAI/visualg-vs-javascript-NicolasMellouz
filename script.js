@@ -1,12 +1,13 @@
-function parimpar(){
-var n = prompt("Digite um numero");
-var total = n/2;
+function parimpar() {
+    var n = prompt("Digite um número");
     
-if(n & 1){
-    alert("Impar");
-} else {
-    alert("Par");
- }
-    
-
+    if (isNaN(n)) {
+        alert("Erro: entrada inválida. Por favor, digite um número válido.");
+    } else {
+        if (n % 2 === 0) {
+            alert("Par");
+        } else {
+            alert("Ímpar");
+        }
+    }
 }
