@@ -26,12 +26,7 @@ footer {
     padding: 20px;
     text-align: center;
 }
-.container {  
-    width: 400px;  
-    height: 200px;  
-    border: 5px solid rgb(255, 255, 255);  
-    display: grid;  
-    }  
+
 button {
     width: 150px;
     height: 70px;
