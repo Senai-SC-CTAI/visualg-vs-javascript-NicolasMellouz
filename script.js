@@ -1,5 +1,5 @@
 function parimpar() {
-    var n = prompt("Digite um número");
+   var n = document.getElementById("numero").value;
     
     if (isNaN(n)) {
         alert("Erro: entrada inválida. Por favor, digite um número válido.");
