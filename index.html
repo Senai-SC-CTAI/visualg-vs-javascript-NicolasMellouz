@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Oleo Sesi Senai</title>
+</head>
+
+<body id="corpo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="text-align: center">
+                    
+                </div>
+                <h3 class="text-center">
+                    Alunos
+                </h3>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>
+                                Matricula
+                            </th>
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Nota
+                            </th>
+                            <th>
+                                Frequencia
+                            </th>
+                            <th>
+                                Abas Pedagogicas
+                            </th>
+                            <th>
+                                Advertencias
+                            </th>
+                            <th>
+                                Sobre
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="carros"></tbody>
+                </table>
+                <dl>
+                    Selecione um aluno desejado para obter mais informações
+                </dl>
+
+                <!-- Botão Novo aluno -->
+                <div class="text-center">
+                    <button class="btn btn-primary" id="btnNovoAluno">Novo Alunos</button>
+                </div>
+
+                <!-- Modal Novo Aluno -->
+                <div id="modalNovoAluno" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Cadastrar Novo Aluno</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formNovoAluno">
+                                <label for="matricula">matricula:</label>
+                                <input type="text" id="matricula" required>
+
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" required>
+
+                                <label for="nota">Nota:</label>
+                                <select id="nota" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <label for="frequencia">frequencia:</label>
+                                <select id="frequencia" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <label for="abaspedagogicas">abas pedagogicas:</label>
+                                <select id="abaspedagogicas" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <label for="advertencias">advertencias:</label>
+                                <select id="advertencias" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <button type="button" onclick="cadastrarAluno()">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal de Informações do aluno -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Informações do Aluno</h2>
+                        <p>Matricula: <span id="matriculaModal"></span></p>
+                        <p>Nome: <span id="nomeModal"></span></p>
+                        <p>Nota: <span id="notaModal"></span></p>
+                        <p>Frequencia: <span id="frequenciaModal"></span></p>
+                        <p>abaspedagogicas: <span id="abaspedagogicasModal"></span></p>
+                        <p>Advertencias: <span id="advertenciasModal"></span></p>
+                        <p>Caso tenha a aparecição de algum "RUIM", o aluno não está aprovado.</p>
+                        <button id="btnExcluirAluno">Excluir Aluno</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
